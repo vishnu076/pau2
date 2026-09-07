@@ -23,6 +23,7 @@ function revealOnInteraction() {
 
 midnightScreen.addEventListener("dblclick", revealOnInteraction);
 midnightScreen.addEventListener("wheel", revealOnInteraction, { passive: true });
+midnightScreen.addEventListener("touchmove", revealOnInteraction, { passive: true });
 
 // The midnight screen appears first.
 // If the visitor opens the site at any time other than exactly 00:00,
