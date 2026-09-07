@@ -4,11 +4,25 @@ const scene = document.getElementById("envelopeScene");
 const letter = document.getElementById("letter");
 const closeButton = document.getElementById("closeLetter");
 const midnightScreen = document.getElementById("midnightScreen");
+let revealTimer;
 
 function showBirthdayWebsite() {
+  if (revealTimer) {
+    clearTimeout(revealTimer);
+    revealTimer = null;
+  }
   midnightScreen.classList.add("hidden");
   document.body.style.overflow = "";
 }
+
+function revealOnInteraction() {
+  if (!midnightScreen.classList.contains("hidden")) {
+    showBirthdayWebsite();
+  }
+}
+
+midnightScreen.addEventListener("dblclick", revealOnInteraction);
+midnightScreen.addEventListener("wheel", revealOnInteraction, { passive: true });
 
 // The midnight screen appears first.
 // If the visitor opens the site at any time other than exactly 00:00,
@@ -17,7 +31,7 @@ function showBirthdayWebsite() {
 const params = new URLSearchParams(window.location.search);
 
 if (params.get("previewMidnight") === "true") {
-  setTimeout(showBirthdayWebsite, 4300);
+  revealTimer = setTimeout(showBirthdayWebsite, 4300);
 } else {
   const now = new Date();
   const nextMidnight = new Date(now);
@@ -27,9 +41,9 @@ if (params.get("previewMidnight") === "true") {
   // If the page is opened within the first 12 seconds after midnight,
   // show the birthday reveal immediately.
   if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() < 12) {
-    setTimeout(showBirthdayWebsite, 4300);
+    revealTimer = setTimeout(showBirthdayWebsite, 4300);
   } else {
-    setTimeout(showBirthdayWebsite, delay);
+    revealTimer = setTimeout(showBirthdayWebsite, delay);
   }
 }
 
