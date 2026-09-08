@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- MIDNIGHT REVEAL -->
+  <div class="midnight-screen" id="midnightScreen" aria-hidden="true">
+    <div class="midnight-glow"></div>
+    <div class="midnight-content">
+      <div class="midnight-stars">✦ &nbsp; ✧ &nbsp; ✦</div>
+      <p class="midnight-small">It is finally time...</p>
+      <h2>Happy Birthday</h2>
+      <p class="midnight-name">My Love ❤️</p>
+    </div>
+  </div>
+
+  <!-- BIRTHDAY COVER -->
+  <main class="hero" id="hero">
+    <div class="photo-wall">
+      <!-- Replace these with your own photos -->
+      <div class="bg-photo p1"><img src="photos/photo1.jpeg" alt=""></div>
+      <div class="bg-photo p2"><img src="photos/photo2.jpeg" alt=""></div>
+      <div class="bg-photo p3"><img src="photos/photo3.jpeg" alt=""></div>
+      <div class="bg-photo p4"><img src="photos/photo4.jpeg" alt=""></div>
+      <div class="bg-photo p5"><img src="photos/photo5.jpeg" alt=""></div>
+      <div class="bg-photo p6"><img src="photos/photo6.jpeg" alt=""></div>
+      <div class="bg-photo p7"><img src="photos/photo7.jpeg" alt=""></div>
+      <div class="bg-photo p8"><img src="photos/photo8.jpeg" alt=""></div>
+      <div class="bg-photo p9"><img src="photos/photo9.jpeg" alt=""></div>
+      <div class="bg-photo p10"><img src="photos/photo10.jpeg" alt=""></div>
+      <div class="bg-photo p11"><img src="photos/photo11.jpeg" alt=""></div>
+      <div class="bg-photo p12"><img src="photos/photo12.jpeg" alt=""></div>
+    </div>
+
+    <div class="photo-overlay"></div>
+    <div class="grain"></div>
+
+    <section class="birthday-content">
+      <p class="eyebrow">A little something for you</p>
+      <h1>Happy Birthday</h1>
+      <p class="name">My Love</p>
+
+      <button class="letter-button" id="openLetter">
+        <span class="button-icon">✉</span>
+        <span>Open my letter</span>
+      </button>
+    </section>
+  </main>
+
+  <!-- LETTER EXPERIENCE -->
+  <div class="letter-overlay" id="letterOverlay" aria-hidden="true">
+    <div class="overlay-bg"></div>
+
+    <button class="close-button" id="closeLetter" aria-label="Close letter">×</button>
+
+    <div class="envelope-scene" id="envelopeScene">
+      <div class="envelope">
+        <div class="envelope-back"></div>
+        <div class="letter-paper-preview"></div>
+        <div class="flap"></div>
+        <div class="envelope-front"></div>
+        <div class="wax-seal">♥</div>
+      </div>
+      <p class="open-hint">A letter, just for you</p>
+    </div>
+
+    <article class="letter" id="letter">
+      <div class="letter-inner">
+        <div class="letter-decoration">❦</div>
+
+        <div class="letter-date">29 August, 2026</div>
+
+        <h2>My Dear Paru,</h2>
+
+        <div class="letter-body">
+          <p>Adiyame njan parayan ullath, Happy Bday to a big vazha 😂❤️</p>
+
+          <p>Nq gift indakan kazhiv illa, athinulla shema illa :( Apo nte gift suksich vekkan patillallo enn orth, ith und. But athinte link save Cheyyalo... ath engane ind?</p>
+
+          <p>Vere oru kariyam ind. Njan innu vilkkuvo illeyo enn ariyilla, madi aayitt alaa ninq exam ale. Atond nee nerathe urangiyalo. Angane aanenkil njan vilikkilla. Pine bodham vannittu njan entha vilikkanje enn aloich — overthink cheyyaruth.</p>
+
+          <p>Pine ninakk enth gift vangikanam enn aalochichappo first ente manasil vannath skirt n crop top aanu. But pine ninq Onathin dress idukan patilla enn paranjille enit ath veshamich irikarunile. Athond njan plan maati. Ippo ath ninte kayyil vann kaanum, idk.. Avarkkum exam alle, athond njan angane paranjilla epo kodukanam enn.</p>
+
+          <p>Apo ente oru ithil ith vayikkunnathin munbe ath kittiyekum ..don't know. Size correct alle? Kuzhappam illa, namukku maattam aa. Jeans enikk athra ishtayila nee koodi nokk. Ath kolil alle, namukku maattam 😂</p>
+
+          <p>Vere entha parayaa... I love you so much ❤️ and hope I will be part of every birthday you have. Polikk! 🫶</p>
+
+          <p>Pinee exam nallonam ezhuth. All the best and Happy Bday kutus ❤️🎂</p>
+        </div>
+
+        <div class="signature">
+          <span>With all my love,</span>
+          <strong>Vishnu</strong>
+        </div>
+
+        <div class="letter-decoration bottom">❦</div>
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
